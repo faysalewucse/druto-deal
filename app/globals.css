@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.zoom-image {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out object-cover transform hover:scale-105;
+}
