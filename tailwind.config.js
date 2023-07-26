@@ -5,6 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#4f46e5",
+        violet: "#8b5cf6",
+      },
+    },
+  },
+  darkMode: ["class", '[data-theme="dark"]'],
   experimental: true,
   plugins: [],
 };

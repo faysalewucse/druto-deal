@@ -5,3 +5,11 @@
 .zoom-image {
   @apply absolute w-full h-full transition-all duration-500 ease-in-out object-cover transform hover:scale-105;
 }
+
+.transition-200 {
+  @apply transition-all duration-300;
+}
+
+.transition-300 {
+  @apply transition-all duration-300;
+}
