@@ -13,3 +13,7 @@
 .transition-300 {
   @apply transition-all duration-300;
 }
+
+svg {
+  vertical-align: baseline;
+}

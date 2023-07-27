@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-interface ThemeContextValue {
+export interface ThemeContextValue {
   theme: string;
   toggleTheme: () => void;
 }

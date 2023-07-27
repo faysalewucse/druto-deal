@@ -1,13 +1,8 @@
-"use client";
-
-import ThemeContext from "@/contexts/ThemeContext";
+import ThemeContext, { ThemeContextValue } from "@/contexts/ThemeContext";
 import { useContext } from "react";
 
-const useTheme = () => {
+const useTheme = (): ThemeContextValue => {
   const theme = useContext(ThemeContext);
-  const isClient = typeof window !== "undefined";
-
-  if (!isClient && theme) return {};
 
   if (!theme) {
     throw new Error(

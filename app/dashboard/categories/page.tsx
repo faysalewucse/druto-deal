@@ -2,7 +2,7 @@
 
 import { Button } from "antd";
 import { Table, Space } from "antd";
-import { MdDelete, MdEdit } from "react-icons/md";
+import { DeleteFilled, EditOutlined } from "@ant-design/icons";
 
 const categories = [
   {
@@ -51,10 +51,8 @@ const columns = [
     title: "Action",
     render: () => (
       <Space size="middle">
-        <Button size="small" icon={<MdEdit />}>
-          Edit
-        </Button>
-        <Button size="small" danger icon={<MdDelete />}>
+        <Button icon={<EditOutlined />}>Edit</Button>
+        <Button danger icon={<DeleteFilled />}>
           Delete
         </Button>
       </Space>

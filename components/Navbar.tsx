@@ -5,7 +5,8 @@ import Container from "./Container";
 import { FaShippingFast } from "react-icons/fa";
 import Navlink from "./Navlink";
 import useTheme from "@/hooks/useTheme";
-import { MdDarkMode, MdLight } from "react-icons/md";
+import { HiMoon } from "react-icons/hi";
+import { CiLight } from "react-icons/ci";
 
 const navItems = [
   {
@@ -26,7 +27,7 @@ const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="p-5 border-b dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900">
+    <nav className="p-5 border-b dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 dark:text-white">
       <Container className="flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <FaShippingFast className="text-4xl text-primary" />
@@ -48,8 +49,11 @@ const Navbar: React.FC = () => {
               {navItem.label}
             </Navlink>
           ))}
-          <div className="text-4xl" onClick={toggleTheme}>
-            {theme === "dark" ? <MdLight /> : <MdDarkMode />}
+          <div
+            className="text-3xl hover:scale-110 transition-200"
+            onClick={toggleTheme}
+          >
+            {theme === "dark" ? <CiLight className="text-white" /> : <HiMoon />}
           </div>
         </div>
       </Container>
