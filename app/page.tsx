@@ -63,7 +63,7 @@ export default function Home() {
           <Link
             key={category.id}
             href={`/category/${category.id}`}
-            className="flex items-center gap-2 hover:ml-1 transition-all duration-200 hover:text-orange-500"
+            className="flex items-center gap-2 hover:ml-1 transition-all duration-200 hover:text-primary"
           >
             <div className="text-xl">{category.icon}</div>
             {category.name}

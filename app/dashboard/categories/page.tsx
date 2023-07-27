@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "antd";
 import { Table, Space } from "antd";
 import { MdDelete, MdEdit } from "react-icons/md";
 
@@ -50,15 +51,12 @@ const columns = [
     title: "Action",
     render: () => (
       <Space size="middle">
-        <h6 className="cursor-pointer text-primary hover:text-white border border-primary hover:bg-primary transition-200 rounded px-3 flex items-center gap-2">
-          <MdEdit />
+        <Button size="small" icon={<MdEdit />}>
           Edit
-        </h6>{" "}
-        {/* Use the action property from the record */}
-        <h6 className="cursor-pointer text-red-500 hover:text-white border border-red-600 hover:bg-red-600 transition-200 rounded px-3 flex items-center gap-2">
-          <MdDelete />
+        </Button>
+        <Button size="small" danger icon={<MdDelete />}>
           Delete
-        </h6>
+        </Button>
       </Space>
     ),
     key: "action",
@@ -68,7 +66,7 @@ const columns = [
 const page: React.FC = () => {
   return (
     <div className="p-5">
-      <h1 className="text-xl font-bold">CATEGORIES</h1>
+      <h1 className="text-xl font-bold mb-5">CATEGORIES</h1>
       <Table size="small" dataSource={categories} columns={columns} />;
     </div>
   );
